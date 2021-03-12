@@ -4,9 +4,9 @@
 - 수식 입력 요구문 출력
 - 사용자 입력
     - 비정상적인 입력 처리
+        - 연산자나 숫자가 아닌 경우
         - 첫 번째 입력이 연산자인 경우
         - 마지막 입력이 연산자인 경우
-        - 연산자나 숫자가 아닌 경우 
         - 나누기 연산자 뒤에 0이 입력된 경우
         - 나머지 연산자 뒤에 0이 입력된 경우
         - 숫자나 연산자가 두 번 연속 입력된 경우
@@ -14,6 +14,30 @@
 - 띄어쓰기 기준으로 수식 분리
 - 수식 계산
 - 재시작 여부 확인
+
+## 💾클래스 및 메서드 분류
+- Application
+- Controller
+    - run
+- Calculator
+    - calculate
+    - judgeOperator
+    - add
+    - sub
+    - mul
+    - div
+    - mod
+- Operator
+    - getOperator
+- Operand
+    - getOperand
+- Receiver
+    - receiveOperation
+    - splitOperation  
+    - validator
+- Printer
+    - printMessage 
+- Message
 
 ## 🐬기능 요구사항
 - 연산자는 +, -, *, /, % 를 구현한다.
@@ -41,3 +65,11 @@
 - 함수(또는 메서드)의 길이가 15라인을 넘어가지 않도록 구현한다.
 - 함수(또는 메서드)가 한가지 기능만 수행하도록 구현한다.
 - else 예약어를 쓰지 않는다.
+- switch/case문(door 아님)을 쓰지 않다.
+- static 최대한 쓰지 않는다.
+
+## 힌트
+```
+String value = scanner.nextLine();
+String[] values = value.split(" "); 
+```
